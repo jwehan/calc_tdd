@@ -6,7 +6,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 class CalcTest {
-
     @Test
     @DisplayName("1 + 1 == 2")
     void t1() {

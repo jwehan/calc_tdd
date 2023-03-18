@@ -2,30 +2,18 @@ package io.jwehan;
 
 public class Calc {
     public static int run(String exp){
-        boolean getSum = exp.contains("+");
-        boolean getMin = exp.contains("-");
 
-        String[] bits = null;
+        exp = exp.replaceAll("-", "+ -");
 
-        if(getSum){
-            bits = exp.split("\\+");
-        } else if (getMin) {
-            bits = exp.split("\\-");
-        }
+        String[] split = exp.split("\\+");
 
-        int a = Integer.parseInt(bits[0].trim());
-        int b = Integer.parseInt(bits[1].trim());
+        int a = Integer.parseInt(split[0].trim());
+        int b = Integer.parseInt(split[1].trim());
         int c = 0;
 
-        if (bits.length > 2){
-            c = Integer.parseInt(bits[3].trim());
+        if ( split.length > 2){
+            c = Integer.parseInt(split[2]);
         }
-        if ( getSum){
-            return a + b;
-        } else if ( getMin){
-            return a - b;
-        }
-
-        throw new RuntimeException("오 류 오 류 ");
+        return a+ b+ c;
     }
 }
