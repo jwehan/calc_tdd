@@ -2,7 +2,11 @@ package io.jwehan;
 
 public class Calc {
     public static int run(String exp){
+        String[] bits = exp.split(" \\+ ");
 
-        return 2;
+        int a = Integer.parseInt(bits[0]);
+        int b = Integer.parseInt(bits[1]);
+
+        return a + b;
     }
 }
