@@ -7,13 +7,11 @@ public class Calc {
 
         String[] ttd = exp.split("\\+");
 
-        int a = Integer.parseInt(ttd[0].trim());
-        int b = Integer.parseInt(ttd[1].trim());
-        int c = 0;
+        int sum = 0;
 
-        if ( ttd.length > 2){
-            c = Integer.parseInt(ttd[2]);
+        for (String s : ttd) {
+            sum += Integer.parseInt(s.trim());
         }
-        return a+ b+ c;
+        return sum;
     }
 }

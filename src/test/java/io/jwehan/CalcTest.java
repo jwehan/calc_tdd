@@ -2,6 +2,7 @@ package io.jwehan;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 
@@ -40,5 +41,11 @@ class CalcTest {
     @DisplayName("100 - 20 == 80")
     void t7() {
         assertThat(Calc.run("100 - 20")).isEqualTo(80);
+    }
+
+    @Test
+    @DisplayName("100 - 20 + 30 == 110")
+    void t8() {
+        assertThat(Calc.run("100 - 20 + 30")).isEqualTo(110);
     }
 }
